@@ -12,7 +12,7 @@ using namespace std;
 
 
 
-template <typename T>
+template <typename T, typename itemType>
 class MyIterator {
     T container;
     long index;
@@ -23,7 +23,7 @@ public:
         this->index = idx;
     }
     
-    int operator*() const {
+    itemType operator*() const {
         
         return this->container[index];
     }
@@ -60,8 +60,8 @@ public:
 int main(int argc, const char * argv[]) {
     vector<int>  vec = {1,2,3,4,5,6,7,8,9,10};
 
-    auto iter = MyIterator<vector<int>>(vec, 1L);
-    auto end = MyIterator<vector<int>>(vec,vec.size());
+    auto iter = MyIterator<vector<int>, int>(vec, 1L);
+    auto end = MyIterator<vector<int>, int>(vec,vec.size());
     
     cout <<"We init the iter at position 1,\nthe actual item is: " << *iter<<endl;
     
