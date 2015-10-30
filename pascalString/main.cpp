@@ -164,9 +164,9 @@ int main(){
     String myStr(str,true);
     String myStr2(cstr,false);
     String myStr3 = "Hello, world!";
-    cout <<  myStr<<endl;
-    cout <<  myStr2<<endl;
-    cout <<  myStr3<<endl;
+    cout <<  "yo "+myStr<<endl;
+    cout <<  "Hi "+myStr2<<endl;
+    cout <<  myStr3 + " yo:)"<<endl;
     
 
 }
